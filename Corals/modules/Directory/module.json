@@ -1,0 +1,21 @@
+{
+  "code": "corals-directory",
+  "name": "Directory Module",
+  "author": "Corals",
+  "type": "module",
+  "description": "Directories Package",
+  "namespace": "Corals\\Modules\\Directory\\",
+  "provider": "DirectoryServiceProvider",
+  "version": "2.2",
+  "load_order": "0",
+  "folder": "Directory",
+  "autoload": "psr-4",
+  "icon": "fa fa-th-large",
+  "require": {
+    "corals-foundation": "^4.0",
+    "corals-cms": "^1.6",
+    "corals-utility": "^1.0"
+  },
+  "platform": "Directory",
+  "supported_platforms": []
+}

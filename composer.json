@@ -1,0 +1,98 @@
+{
+  "name": "laravel/laravel",
+  "description": "The Laravel Framework.",
+  "keywords": [
+    "framework",
+    "laravel"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^7.2",
+    "anhskohbo/no-captcha": "^3.0",
+    "barryvdh/elfinder-flysystem-driver": "^0.1.4|^0.2",
+    "barryvdh/laravel-dompdf": "^0.8.1",
+    "consoletvs/charts": "6.*",
+    "davejamesmiller/laravel-breadcrumbs": "^5.2",
+    "fideloper/proxy": "~4.0",
+    "guzzlehttp/guzzle": "~6.0",
+    "hashids/hashids": "^3.0",
+    "intervention/image": "^2.4",
+    "laracasts/flash": "^3.0",
+    "laravel/framework": "^6.0",
+    "laravel/tinker": "^1.0",
+    "laravelcollective/html": "^6.0",
+    "madnest/madzipper": "^1.0",
+    "spatie/laravel-activitylog": "^3.1",
+    "spatie/laravel-medialibrary": "^7.0.0",
+    "spatie/laravel-permission": "^3.0",
+    "stolz/assets": "^0.1.11",
+    "symfony/http-foundation": "~4.1",
+    "wikimedia/composer-merge-plugin": "^1.4",
+    "yajra/laravel-auditable": "^4.0",
+    "yajra/laravel-datatables": "^1.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.0",
+    "filp/whoops": "~2.0",
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "orangehill/iseed": "2.6.*",
+    "phpunit/phpunit": "~6.0"
+  },
+  "autoload": {
+    "classmap": [
+      "database/seeds",
+      "database/factories"
+    ],
+    "files": [],
+    "psr-4": {
+      "App\\": "app/",
+      "Corals\\": "Corals/core",
+      "Corals\\Modules\\": "Corals/modules"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": [
+      ]
+    },
+    "merge-plugin": {
+      "include": [
+        "Corals/modules/Payment/*/composer.json",
+        "Corals/modules/*/composer.json",
+        "Corals/core/*/composer.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

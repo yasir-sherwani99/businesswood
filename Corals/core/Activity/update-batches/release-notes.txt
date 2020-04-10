@@ -1,0 +1,11 @@
+2.0
+------------------------------------
+Laravel 6 Upgrade
+
+1.2.1
+-----------------------
+Add Admin Permission
+
+1.2
+- add translation feature and enhance breadcrumbs
+-----------------------------------------------------

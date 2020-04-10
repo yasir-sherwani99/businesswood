@@ -1,0 +1,8 @@
+{
+  "require": {
+    "fleshgrinder/format": "^1.1",
+    "laravel/socialite": "~4.0",
+    "nexmo/client": "~2.0"
+
+  }
+}
